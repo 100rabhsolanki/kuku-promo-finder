@@ -17,3 +17,7 @@ Kuku — AI Generalist Assignment.pdf
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Source-derived assignment material; keep private and out of public deployments
+kuku_promo_finder/outputs/
+kuku_promo_finder/submission/
