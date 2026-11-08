@@ -26,11 +26,18 @@ GitHub Repository: https://github.com/100rabhsolanki/kuku-promo-finder
 Branch: main
 
 --------------------------------------------------------------------------------
-3. SOLUTION DOCUMENT (STRICTLY 2 PAGES)
+3. SOLUTION DOCUMENT & EDITORIAL REPORTS (WORD DOCX & PDF)
 --------------------------------------------------------------------------------
-File: Kuku_Problem_1_Solution_Document.pdf
-Path in this package: ./Kuku_Problem_1_Solution_Document.pdf
-Format: PDF, publication-ready, strictly 2 pages.
+Primary Solution Document (Strictly 2 Pages):
+- Kuku_Problem_1_Solution_Document.docx (Microsoft Word format)
+- Kuku_Problem_1_Solution_Document.pdf  (Publication-ready 2-page PDF)
+- Solution_Document.md                  (Markdown source)
+
+Detailed Technical & Audit Reports:
+- Top_Promos_Report.docx                (Word document of all top promo candidate cards with evidence)
+- Quality_Audit_And_Failures.docx       (Word document of the 4 failure modes & review checklist)
+- reports/top_promos_report.md
+- reports/quality_check_and_failures.md
 
 Key Sections Covered:
 - Problem Choice, Target User & Editorial Workflow Transformation
