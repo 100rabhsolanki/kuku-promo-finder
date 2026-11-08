@@ -51,9 +51,15 @@ st.markdown(
     <style>
       .block-container {
         max-width: 1160px;
-        padding-top: 1.8rem;
-        padding-bottom: 3.5rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
       }
+      [data-testid="stAppViewContainer"] { background: #FAFBFC; }
+      [data-testid="stTabs"] [role="tablist"] { gap: 8px; border-bottom: 1px solid #E2E8F0; }
+      [data-testid="stTabs"] button[role="tab"] { border-radius: 8px 8px 0 0; padding: 10px 14px; color: #475569; font-weight: 600; }
+      [data-testid="stTabs"] button[role="tab"][aria-selected="true"] { color: #0F766E; border-bottom-color: #0F766E; }
+      [data-testid="stMetric"] { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 2px rgba(15, 23, 42, .04); }
+      .stButton > button, .stDownloadButton > button { border-radius: 8px; font-weight: 600; }
       .eyebrow {
         color: #4B5563;
         text-transform: uppercase;
@@ -480,11 +486,10 @@ st.caption(
 st.markdown("---")
 
 # ─── Navigation Tabs ──────────────────────────────────────────────────────────
-tab_benchmark, tab_analyze, tab_audit, tab_submission = st.tabs([
+tab_benchmark, tab_analyze, tab_audit = st.tabs([
     "Full 50-Episode Results",
     "Analyze Screenplay",
     "Quality Audit & Limitations",
-    "Submission Document",
 ])
 
 
@@ -790,91 +795,6 @@ with tab_audit:
         "3. **Platform Routing:** Route high-betrayal and wedding drama (Ep 1, 11) to TikTok; route royal reveal and action (Ep 42, 45) to YouTube Shorts."
     )
 
-
-# ══════════════════════════════════════════════════════════════════════════════
-# TAB 4: SOLUTION DOCUMENT & SUBMISSION MATERIALS
-# ══════════════════════════════════════════════════════════════════════════════
-with tab_submission:
-    st.markdown("#### Solution Document (Official 2-Page Submission)")
-    st.write("Complete 2-page brief submitted for the Kuku AI Generalist Assignment.")
-
-    # PDF Download Button
-    pdf_paths = [
-        os.path.join(KUKU_DIR, "submission", "Kuku_Problem_1_Solution_Document.pdf"),
-        os.path.join(BASE_DIR, "kuku_promo_finder", "submission", "Kuku_Problem_1_Solution_Document.pdf"),
-        os.path.join(BASE_DIR, "KUKU_SUBMISSION_PACKAGE", "Kuku_Problem_1_Solution_Document.pdf"),
-    ]
-    pdf_found = False
-    for p in pdf_paths:
-        if os.path.exists(p):
-            with open(p, "rb") as f:
-                pdf_bytes = f.read()
-            st.download_button(
-                label="Download Official 2-Page Solution PDF",
-                data=pdf_bytes,
-                file_name="Kuku_Problem_1_Solution_Document.pdf",
-                mime="application/pdf",
-                use_container_width=True,
-            )
-            pdf_found = True
-            break
-
-    if not pdf_found:
-        st.info("PDF document located at `KUKU_SUBMISSION_PACKAGE/Kuku_Problem_1_Solution_Document.pdf`.")
-
-    st.markdown("""
-    ##### 1. Problem Choice, Target User & Editorial Workflow
-    - **Why Problem 1:** In high-velocity vertical microdrama publishing (1-2 minute episodes), user acquisition on TikTok, Instagram Reels, and YouTube Shorts is driven almost entirely by short-form promo video ads (20-60s). The fundamental operational bottleneck is creative discovery: human video editors currently spend 1.5 to 2 hours per show manually scrubbing through 50 episodes to spot hooks, turning points, and cliffhangers.
-    - **Target User:** Short-Form Video Editors and Growth Marketing Leads.
-    - **Workflow Improvement:** The tool acts as an **algorithmic creative scout**. Instead of manually watching 100+ minutes of video per show, an editor opens the tool's output and reviews pre-extracted, pre-ranked candidate promo cards with exact timestamps, hook descriptions, cliffhanger points, and editorial risk notes. Review time drops from **100 minutes to under 5 minutes**.
-
-    ---
-
-    ##### 2. Architecture & Division of Responsibility
-    | Component | Handled By Code / Rules | Handled By Heuristic / AI Model |
-    | :--- | :--- | :--- |
-    | **Parsing** | Regex extraction of 3,727 blocks across 50 episodes; timestamp parsing (`MM:SS.SS` to float seconds). | Block type categorization (Camera vs Action vs Dialogue vs Sound FX). |
-    | **Window Extraction** | Strict temporal windowing (20.0s $\\le$ duration $\\le$ 60.0s); hook offset detection (0.0s – 3.5s). | Candidate filtering based on dramatic event markers. |
-    | **Evaluation** | Mathematical scoring calculation, IoU overlap calculation. | Hook immediacy, cliffhanger urgency, standalone clarity, context penalty. |
-    | **Deduplication** | Non-Maximum Suppression (NMS) with 0.35 IoU threshold. | Quality clustering and confidence classification. |
-
-    ---
-
-    ##### 3. Mathematical Scoring Model & Ranking Rubric
-    Every candidate promo is evaluated across five weighted dimensions:
-    $$\\text{Composite Score} = 0.30 \\times \\text{Hook} + 0.25 \\times \\text{Cliffhanger} + 0.20 \\times \\text{Standalone} + 0.15 \\times \\text{Intensity} + 0.10 \\times \\text{Context}$$
-
-    1. **Hook Immediacy (0-10):** Rewards linguistic shock (*"You're the Duke?"*, *"Married a beggar!"*), physical violence (slaps, unsheathing swords, shattering cathedral gates), and audio stingers in the first 3.5 seconds.
-    2. **Cliffhanger Urgency (0-10):** Evaluates unanswered questions, cut-to-black peaks, red-hot iron threats, and sudden interruptions.
-    3. **Standalone Clarity (0-10):** Rewards universal archetypes (wedding humiliation, undercover royalty); penalizes deep lore jargon (*"charcoal antidote"*, *"council bylaws"*).
-    4. **Temporal Deduplication (NMS):** 6,298 candidate windows were extracted across 50 episodes. Non-Maximum Suppression eliminated 6,154 redundant, time-shifted variations, retaining **144 distinct, high-impact candidates**.
-
-    ---
-
-    ##### 4. Proven High-Performing Candidates (From 50-Episode Run)
-    - **Rank 1 (Episode 45 | 00:19.40–01:14.00 | 54.6s | Score: 9.02 / 10 | Confidence: High)**
-      - *Hook (00:22.90):* Juliana: *"You're the Duke?"*
-      - *Cliffhanger (01:10.50):* Catherine: *"Wife?!"*
-      - *Why It Works:* Undercover-royalty reveal hooks viewers with a status reversal and ends before the villain can react.
-    - **Rank 2 (Episode 42 | 00:14.60–01:12.40 | 57.8s | Score: 8.84 / 10 | Confidence: High)**
-      - *Hook (00:18.00):* Blond Nobleman: *"Guards! Arrest this imposter!"*
-      - *Cliffhanger (01:12.40):* Alexander's Mother: *"Let everyone hear me! This is my son Alexander!"*
-    - **Rank 3 (Episode 11 | 00:26.90–01:24.00 | 57.1s | Score: 8.15 / 10 | Confidence: High)**
-      - *Hook (00:29.30):* Gerald: *"Of course you would defend him. You married a beggar!"*
-      - *Cliffhanger (01:24.00):* Gerald: *"Going to strike a gentleman in front of his wife?"*
-
-    ---
-
-    ##### 5. AI Tools Used & Where the Model Got Something Wrong
-    - **AI Tools Used:** Gemini 3.8 Flash and Claude 3.5 Sonnet for archetype analysis, rubric calibration, and prompt framing.
-    - **Where the Model Got Something Wrong:** When evaluating Episode 1's altar betrayal, an LLM flagged Juliana's tearful clenching of her bridal gown (02:11.30) as a *"resolved emotional ending"* because Gerald had finished his monologue and walked away. The AI mistook the physical conclusion of a speech for emotional closure, completely failing to recognize that Juliana's hardening glare into a cut-to-black drone swell is the quintessential microdrama cliffhanger setup. We corrected this by creating an explicit rule rewarding cut-to-black peaks and clenched physical reactions.
-
-    ---
-
-    ##### 6. Scaling Across Shows & Production Timeline
-    - **Execution Speed:** Processed all 50 episodes (102.6 minutes of screenplay text, 3,727 blocks) in **0.91 seconds**.
-    - **Cost at Scale:** **$0.00** for parsing, windowing, and NMS deduplication. When connected to a lightweight LLM API (e.g. Gemini Flash), evaluating 144 pre-filtered candidates costs **under $0.01 per show**, saving hours of manual labor.
-    """)
 
 # Footer
 st.markdown("""
