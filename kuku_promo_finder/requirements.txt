@@ -1,0 +1,4 @@
+# Core pipeline uses Python Standard Library (no external dependencies required)
+# Gradio is only needed for the optional web UI / Hugging Face Space
+gradio>=4.0.0
+

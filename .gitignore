@@ -1,0 +1,19 @@
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python byte code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Assignment proprietary inputs (Kept strictly local per assignment confidentiality clause)
+I Married a Broken Soldier. He was a Duke-script/
+Kuku — AI Generalist Assignment.pdf
+
+# OS generated files
+.DS_Store
+Thumbs.db
