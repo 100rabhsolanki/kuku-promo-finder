@@ -10,13 +10,14 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> /F3 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >> >> >> >>
 endobj
 4 0 obj
-<< /Length 6062 >>
+<< /Length 6247 >>
 stream
-0.12 0.23 0.45 rg 0.12 0.23 0.45 RG 36.00 792.00 523.00 22.00 re B
-BT /F2 10.00 Tf 1.00 1.00 1.00 rg 44.00 800.00 Td (KUKU AI GENERALIST ASSIGNMENT | PROBLEM 1: FIND THE PROMOS \(ADS\)) Tj ET
-BT /F2 15.50 Tf 0.10 0.15 0.30 rg 36.00 768.00 Td (Algorithmic & AI Promo Discovery for Vertical Microdramas) Tj ET
-BT /F3 9.50 Tf 0.35 0.35 0.35 rg 36.00 754.00 Td (End-to-End Screenplay Mining Pipeline, Ranking Model & Editorial Quality Audit) Tj ET
-0.80 0.80 0.80 RG 1.00 w 36.00 746.00 m 559.00 746.00 l S
+0.12 0.23 0.45 rg 0.12 0.23 0.45 RG 36.00 794.00 523.00 20.00 re B
+BT /F2 9.50 Tf 1.00 1.00 1.00 rg 44.00 801.00 Td (KUKU AI GENERALIST ASSIGNMENT | PROBLEM 1: FIND THE PROMOS \(ADS\)) Tj ET
+BT /F2 13.50 Tf 0.10 0.15 0.30 rg 36.00 778.00 Td (Algorithmic & AI Promo Discovery for Vertical Microdramas) Tj ET
+BT /F2 8.00 Tf 0.10 0.30 0.60 rg 36.00 765.00 Td (Candidate: Saurabh Solanki | Live Prototype: https://kuku-promo-finder-saurabh105.streamlit.app/) Tj ET
+BT /F3 7.50 Tf 0.35 0.35 0.35 rg 36.00 754.00 Td (GitHub Repository: https://github.com/100rabhsolanki/kuku-promo-finder | Dataset: 50 Episodes \(3,727 blocks\)) Tj ET
+0.80 0.80 0.80 RG 0.75 w 36.00 747.00 m 559.00 747.00 l S
 0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 726.00 523.00 16.00 re B
 BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 730.00 Td (1. PROBLEM CHOICE, TARGET USER & EDITORIAL WORKFLOW) Tj ET
 BT /F2 8.50 Tf 0.10 0.10 0.10 rg 36.00 716.00 Td (Why Problem 1: In high-velocity microdrama publishing, user acquisition depends entirely on short-form promo ads \(20-60s\)) Tj ET
@@ -127,10 +128,10 @@ xref
 0000000064 00000 n 
 0000000127 00000 n 
 0000000439 00000 n 
-0000006553 00000 n 
-0000006865 00000 n 
+0000006738 00000 n 
+0000007050 00000 n 
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-13311
+13496
 %%EOF

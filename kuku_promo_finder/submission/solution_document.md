@@ -1,8 +1,11 @@
 # Kuku AI Generalist Assignment — Problem 1: "Find the Promos"
 ## Algorithmic & AI Promo Discovery for Microdrama Screenplays
-**Author:** AI Generalist Candidate  
-**Submission Document:** Strictly 2 Pages (PDF generated at `submission/Kuku_Problem_1_Solution_Document.pdf`)  
-**Show Analyzed:** *I Married a Broken Soldier. He was a Duke* (Full 50 Episodes)
+
+- **Candidate:** Saurabh Solanki (`saurabhsolanki105@gmail.com`)
+- **Live Prototype URL:** [https://kuku-promo-finder-saurabh105.streamlit.app/](https://kuku-promo-finder-saurabh105.streamlit.app/)
+- **Source Code Repository:** [https://github.com/100rabhsolanki/kuku-promo-finder](https://github.com/100rabhsolanki/kuku-promo-finder)
+- **Show Analyzed:** *I Married a Broken Soldier. He was a Duke* (Full 50 Episodes, 3,727 blocks)
+- **Official Submission PDF:** Strictly 2 Pages (see `Kuku_Problem_1_Solution_Document.pdf`)
 
 ---
 

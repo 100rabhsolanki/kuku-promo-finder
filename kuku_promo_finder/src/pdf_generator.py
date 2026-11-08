@@ -102,13 +102,14 @@ def build_two_page_solution_document(output_pdf_path: str):
 
     # ════════════════════════ PAGE 1 ════════════════════════
     # Header Banner
-    pdf.draw_rect(36, 792, 523, 22, fill_color=(0.12, 0.23, 0.45), stroke_color=(0.12, 0.23, 0.45))
-    pdf.draw_text("KUKU AI GENERALIST ASSIGNMENT | PROBLEM 1: FIND THE PROMOS (ADS)", 44, 800, font="F2", size=10, color=(1, 1, 1))
+    pdf.draw_rect(36, 794, 523, 20, fill_color=(0.12, 0.23, 0.45), stroke_color=(0.12, 0.23, 0.45))
+    pdf.draw_text("KUKU AI GENERALIST ASSIGNMENT | PROBLEM 1: FIND THE PROMOS (ADS)", 44, 801, font="F2", size=9.5, color=(1, 1, 1))
 
-    # Title & Subtitle
-    pdf.draw_text("Algorithmic & AI Promo Discovery for Vertical Microdramas", 36, 768, font="F2", size=15.5, color=(0.1, 0.15, 0.3))
-    pdf.draw_text("End-to-End Screenplay Mining Pipeline, Ranking Model & Editorial Quality Audit", 36, 754, font="F3", size=9.5, color=(0.35, 0.35, 0.35))
-    pdf.draw_line(36, 746, 559, 746, stroke_color=(0.8, 0.8, 0.8), line_width=1.0)
+    # Title, Candidate Info & Live Prototype Links
+    pdf.draw_text("Algorithmic & AI Promo Discovery for Vertical Microdramas", 36, 778, font="F2", size=13.5, color=(0.1, 0.15, 0.3))
+    pdf.draw_text("Candidate: Saurabh Solanki | Live Prototype: https://kuku-promo-finder-saurabh105.streamlit.app/", 36, 765, font="F2", size=8.0, color=(0.1, 0.3, 0.6))
+    pdf.draw_text("GitHub Repository: https://github.com/100rabhsolanki/kuku-promo-finder | Dataset: 50 Episodes (3,727 blocks)", 36, 754, font="F3", size=7.5, color=(0.35, 0.35, 0.35))
+    pdf.draw_line(36, 747, 559, 747, stroke_color=(0.8, 0.8, 0.8), line_width=0.75)
 
     # Section 1
     y = 730

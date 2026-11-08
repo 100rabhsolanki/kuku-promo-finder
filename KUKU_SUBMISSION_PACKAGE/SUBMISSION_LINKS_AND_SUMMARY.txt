@@ -1,0 +1,69 @@
+================================================================================
+KUKU AI GENERALIST ASSIGNMENT — PROBLEM 1: "FIND THE PROMOS"
+SUBMISSION DETAILS & LINKS
+================================================================================
+
+Candidate Name: Saurabh Solanki
+Candidate Email: saurabhsolanki105@gmail.com
+Problem Chosen: Problem 1: Find the Promos (Ads)
+
+--------------------------------------------------------------------------------
+1. PROTOTYPE URL (DEPLOYED STREAMLIT APP)
+--------------------------------------------------------------------------------
+URL: https://kuku-promo-finder-saurabh105.streamlit.app/
+
+Notes for Reviewer:
+- Deployed on Streamlit Community Cloud.
+- Tab 1 displays the full 50-episode precomputed run (144 ranked candidates across 3,727 screenplay blocks).
+- Tab 2 allows interactive screenplay analysis on uploaded or pasted text with live step-by-step progress tracking.
+- Tab 3 provides the comprehensive Quality Audit detailing 4 real failure modes and the 3-step human editor checklist.
+- Tab 4 hosts the in-app 2-page Solution Document with direct PDF download.
+
+--------------------------------------------------------------------------------
+2. SOURCE CODE REPOSITORY
+--------------------------------------------------------------------------------
+GitHub Repository: https://github.com/100rabhsolanki/kuku-promo-finder
+Branch: main
+
+--------------------------------------------------------------------------------
+3. SOLUTION DOCUMENT (STRICTLY 2 PAGES)
+--------------------------------------------------------------------------------
+File: Kuku_Problem_1_Solution_Document.pdf
+Path in this package: ./Kuku_Problem_1_Solution_Document.pdf
+Format: PDF, publication-ready, strictly 2 pages.
+
+Key Sections Covered:
+- Problem Choice, Target User & Editorial Workflow Transformation
+- Operational Assumptions & Timing Realities (Screenplay vs. Final Video Runtime)
+- Division of Responsibility (Deterministic Code vs. Heuristic/AI Scoring)
+- Multi-Criteria Mathematical Scoring Model (Hook 30%, Cliffhanger 25%, Standalone 20%, Intensity 15%, Context 10%)
+- Proven High-Performing Candidates (Rank 1: Episode 45 Undercover Duke Reveal, 54.6s, Score 9.02/10)
+- Quality Check: 4 Concrete Failure Modes (Medical Caretaking false positive, Lore-Trapped Climax, Pacing Lag, Dialogue Boundary Clipping)
+- AI Tools Used & Model Correction (Where LLM misclassified Juliana's clenched glare)
+- Production Scaling & Economics ($0.00 base, < $0.01 per show with Gemini Flash)
+
+--------------------------------------------------------------------------------
+4. UNEDITED RAW OUTPUTS (FULL 50-EPISODE RUN)
+--------------------------------------------------------------------------------
+Directory: ./raw_outputs/
+- candidates_raw.json (Complete machine-readable JSON array of all 144 ranked candidates)
+- candidates_raw.jsonl (Line-delimited JSON for data pipelines)
+- promo_candidates.csv (Structured tabular CSV for editorial spreadsheets)
+
+Summary Stats:
+- Episodes Processed: 50
+- Total Timestamped Blocks: 3,727
+- Raw Windows Screened: 6,298
+- Overlaps Suppressed via Non-Maximum Suppression (0.35 IoU): 6,154
+- High-Impact Promos Retained: 144
+- Average Candidate Duration: 41.2 seconds
+- Average Hook Offset: 1.8 seconds
+
+--------------------------------------------------------------------------------
+5. EDITORIAL REPORTS
+--------------------------------------------------------------------------------
+Directory: ./reports/
+- top_promos_report.md (Detailed candidate cards with quotes, timestamps, evidence, and notes)
+- quality_check_and_failures.md (Complete failure mode analysis and editorial guidelines)
+
+================================================================================

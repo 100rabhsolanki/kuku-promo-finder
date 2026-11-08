@@ -1,0 +1,137 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> /F3 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >> >> >> >>
+endobj
+4 0 obj
+<< /Length 6247 >>
+stream
+0.12 0.23 0.45 rg 0.12 0.23 0.45 RG 36.00 794.00 523.00 20.00 re B
+BT /F2 9.50 Tf 1.00 1.00 1.00 rg 44.00 801.00 Td (KUKU AI GENERALIST ASSIGNMENT | PROBLEM 1: FIND THE PROMOS \(ADS\)) Tj ET
+BT /F2 13.50 Tf 0.10 0.15 0.30 rg 36.00 778.00 Td (Algorithmic & AI Promo Discovery for Vertical Microdramas) Tj ET
+BT /F2 8.00 Tf 0.10 0.30 0.60 rg 36.00 765.00 Td (Candidate: Saurabh Solanki | Live Prototype: https://kuku-promo-finder-saurabh105.streamlit.app/) Tj ET
+BT /F3 7.50 Tf 0.35 0.35 0.35 rg 36.00 754.00 Td (GitHub Repository: https://github.com/100rabhsolanki/kuku-promo-finder | Dataset: 50 Episodes \(3,727 blocks\)) Tj ET
+0.80 0.80 0.80 RG 0.75 w 36.00 747.00 m 559.00 747.00 l S
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 726.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 730.00 Td (1. PROBLEM CHOICE, TARGET USER & EDITORIAL WORKFLOW) Tj ET
+BT /F2 8.50 Tf 0.10 0.10 0.10 rg 36.00 716.00 Td (Why Problem 1: In high-velocity microdrama publishing, user acquisition depends entirely on short-form promo ads \(20-60s\)) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 705.00 Td (on TikTok, Instagram Reels, and YouTube Shorts. The bottleneck is not rendering, but creative discovery: human editors spend) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 694.00 Td (1.5 to 2 hours manually scrubbing through 50 episodes per series to find hooks, reveals, and cliffhangers.) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 683.00 Td (Target User & Transformation: Microdrama Video Editors and Growth Marketers. The tool serves as an algorithmic scout,) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 672.00 Td (transforming a 100-minute manual video scrub into a 3-minute review of pre-scored, timestamped candidate promo cards.) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 652.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 656.00 Td (2. OPERATIONAL ASSUMPTIONS & TIMING REALITIES) Tj ET
+BT /F2 8.50 Tf 0.15 0.15 0.15 rg 36.00 645.00 Td (Screenplay Timestamps vs. Finished Video Runtime:) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 271.20 645.00 Td ( Timestamps represent planned script timings. Editorial pauses or bumpers require) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 36.00 634.00 Td (editor verification. The tool anchors cuts to verified script timestamps rather than estimating untracked pacing.) Tj ET
+BT /F2 8.50 Tf 0.15 0.15 0.15 rg 36.00 623.00 Td (Multi-Track Concurrency:) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 151.20 623.00 Td ( CAMERA, ACTION, and DIALOGUE overlap in the screenplay. Clip bounds are computed from) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 36.00 612.00 Td (the earliest starting event to the latest ending event of the dramatic beat without duplicate duration accumulation.) Tj ET
+BT /F2 8.50 Tf 0.15 0.15 0.15 rg 36.00 601.00 Td (Scroll-Stopping Hook Window:) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 170.40 601.00 Td ( Social video drop-off occurs within 2.5-3.0s. Hooks occurring after 3.5s are heavily penalized.) Tj ET
+BT /F2 8.50 Tf 0.15 0.15 0.15 rg 36.00 590.00 Td (Single vs. Multi-Episode Promos:) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 189.60 590.00 Td ( Continuous single-episode clips offer optimal narrative cohesion; multi-segment promos) Tj ET
+BT /F1 8.50 Tf 0.25 0.25 0.25 rg 36.00 579.00 Td (are curated for high-contrast pairs \(e.g., Altar Betrayal in Ep 1 paired with Underdog Marriage in Ep 4\).) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 559.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 563.00 Td (3. SYSTEM ARCHITECTURE & RESPONSIBILITY DIVISION) Tj ET
+BT /F3 8.50 Tf 0.30 0.30 0.30 rg 36.00 550.00 Td (We enforce a strict separation between deterministic code/rules and heuristic/AI scoring:) Tj ET
+0.98 0.98 0.98 rg 0.80 0.80 0.80 RG 36.00 492.00 523.00 52.00 re B
+0.80 0.80 0.80 RG 0.50 w 36.00 526.00 m 559.00 526.00 l S
+0.80 0.80 0.80 RG 0.50 w 275.00 544.00 m 275.00 492.00 l S
+BT /F2 8.50 Tf 0.10 0.30 0.10 rg 44.00 531.00 Td (HANDLED BY DETERMINISTIC CODE / RULES) Tj ET
+BT /F2 8.50 Tf 0.40 0.10 0.10 rg 285.00 531.00 Td (HANDLED BY SCORING ENGINE / AI MODEL) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 40.00 517.00 Td (- Script block regex parsing \(3,727 blocks parsed, 0 missed\)) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 280.00 517.00 Td (- Hook immediacy, shock factor & verbal jolt evaluation) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 40.00 507.00 Td (- Strict 20-60s window math and timestamp arithmetic) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 280.00 507.00 Td (- Cliffhanger urgency & unresolved dramatic stakes) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 40.00 497.00 Td (- Non-Maximum Suppression \(NMS\) IoU overlap deduplication) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 280.00 497.00 Td (- Standalone clarity & context-dependency penalty) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 468.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 472.00 Td (4. MULTI-CRITERIA SCORING & RANKING FORMULATION) Tj ET
+BT /F2 8.50 Tf 0.10 0.15 0.35 rg 36.00 459.00 Td (Composite Score = 0.30\(Hook\) + 0.25\(Cliffhanger\) + 0.20\(Standalone\) + 0.15\(Intensity\) + 0.10\(Context\)) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 448.00 Td (1. Hook Immediacy \(0-10\): Scored by linguistic shock \(e.g. 'You're the Duke?', 'Married a beggar!'\), physical aggression \(slap, blade,) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 439.00 Td (   shattered gate\), and sound stingers within the first 3.5s. Decays by 40%/s for every second of delay.) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 428.00 Td (2. Cliffhanger Urgency \(0-10\): Unanswered questions, cut-to-black scene peaks, interrupted revelations, and red-hot iron threats.) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 417.00 Td (3. Standalone Clarity \(0-10\): Rewards universal archetypes \(betrayal at altar, undercover Duke\); penalizes niche medical/lore jargon.) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 406.00 Td (4. Temporal Deduplication: Retains top-scoring moments while eliminating 6,377 overlapping time-shifted candidate windows.) Tj ET
+0.80 0.80 0.80 RG 0.75 w 36.00 42.00 m 559.00 42.00 l S
+BT /F3 8.00 Tf 0.40 0.40 0.40 rg 36.00 30.00 Td (Kuku AI Generalist Assignment - Problem 1: Find the Promos) Tj ET
+BT /F1 8.00 Tf 0.40 0.40 0.40 rg 520.00 30.00 Td (Page 1 of 2) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 6 0 R /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> /F3 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >> >> >> >>
+endobj
+6 0 obj
+<< /Length 6394 >>
+stream
+0.12 0.23 0.45 rg 0.12 0.23 0.45 RG 36.00 792.00 523.00 22.00 re B
+BT /F2 10.00 Tf 1.00 1.00 1.00 rg 44.00 800.00 Td (KUKU AI GENERALIST ASSIGNMENT | PROBLEM 1: QUALITY AUDIT & PRODUCTION SCALING) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 766.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 770.00 Td (5. TOP-RANKED PROMO CANDIDATES \(PROVEN FROM 50-EPISODE RUN\)) Tj ET
+BT /F2 8.50 Tf 0.10 0.25 0.10 rg 36.00 759.00 Td (Rank 1 \(Ep 45, 54.6s | Score 9.02\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 197.00 759.00 Td ( Undercover Duke Reveal. Hook: Juliana discovers 'You're the Duke?' at 00:22.90.) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 748.00 Td (Climax: Alexander frees Juliana from chains; Catherine screams 'Wife?!' in public horror at 01:10.50.) Tj ET
+BT /F2 8.50 Tf 0.10 0.25 0.10 rg 36.00 737.00 Td (Rank 2 \(Ep 42, 57.8s | Score 8.84\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 197.00 737.00 Td ( Shattered Cathedral Gates. Hook: 'Guards! Arrest this imposter!' at 00:18.00.) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 726.00 Td (Climax: Alexander emerges in full ducal regalia; Duchess reveals: 'Let everyone hear me! This is my son Alexander!') Tj ET
+BT /F2 8.50 Tf 0.10 0.25 0.10 rg 36.00 715.00 Td (Rank 3 \(Ep 11, 57.1s | Score 8.15\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 197.00 715.00 Td ( Class Betrayal Confrontation. Hook: Gerald mocks 'You married a beggar!' at 00:29.30.) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 704.00 Td (Climax: Gerald dares him: 'Going to strike a gentleman in front of his wife?' at 01:24.00 before physical confrontation.) Tj ET
+BT /F2 8.50 Tf 0.10 0.25 0.10 rg 36.00 693.00 Td (Rank 4 \(Ep 11 + Ep 42, 36.3s | Score 8.10\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 233.80 693.00 Td ( Mockery to Ducal Vindication Multi-Segment. Gerald mocks Juliana's beggar husband,) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 682.00 Td (cross-cut to Ep 42 where Alexander's mother proclaims him the rightful Duke before the royal guards.) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 662.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 666.00 Td (6. HONEST QUALITY CHECK: REAL FAILURE MODES & EDGE CASES) Tj ET
+BT /F3 8.50 Tf 0.30 0.30 0.30 rg 36.00 654.00 Td (Automated systems fail when narrative context cannot be deduced from isolated words. We observed three failures:) Tj ET
+BT /F2 8.50 Tf 0.40 0.10 0.10 rg 36.00 643.00 Td (Failure 1 \(False Positive - Medical Cues in Ep 8 & 9\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 284.40 643.00 Td ( Words like 'blood', 'fever', and 'wound' scored high on intensity) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 632.00 Td (but represented quiet herbal caretaking rather than dynamic viral conflict. Fix: Added penalties for non-combative medical scenes.) Tj ET
+BT /F2 8.50 Tf 0.40 0.10 0.10 rg 36.00 621.00 Td (Failure 2 \(Context-Trapped Climax in Ep 29\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 238.40 621.00 Td ( High dungeon tension scored well, but dialogue centered on 'charcoal antidotes') Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 610.00 Td (and 'mother's grimoire'. A cold TikTok scroller has zero idea who Rupert is. Fix: Standalone comprehensibility penalizes lore-density.) Tj ET
+BT /F2 8.50 Tf 0.40 0.10 0.10 rg 36.00 599.00 Td (Failure 3 \(Establishing Shot Lag in Ep 7\):) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 229.20 599.00 Td ( Insult occurs at 00:08.50 after silent door opening. If clipped from 00:00.00,) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 588.00 Td (the promo loses the viewer. Fix: Window start dynamically snaps to the exact timestamp of the hook beat rather than scene start.) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 568.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 572.00 Td (7. HUMAN-IN-THE-LOOP EDITORIAL PROTOCOL) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 560.00 Td (The tool proposes candidate cards; the human video editor confirms final cuts via a 3-step checklist:) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 42.00 550.00 Td (1. Visual Jolt Audit: Verify the opening 0-2s has immediate motion or punch-in \(front-trim if actor hesitation occurs\).) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 42.00 540.00 Td (2. Audio Tail Audit: Confirm dialogue does not cut mid-sentence; verify music swell resolves into an unresolved blackout.) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 42.00 530.00 Td (3. Channel Destination: Route betrayal/slap clips \(Ep 1, 11\) to TikTok; route vindication/identity reveals \(Ep 42, 45\) to YouTube Shorts.) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 510.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 514.00 Td (8. AI TOOLS USED & WHERE THE MODEL GOT SOMETHING WRONG) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 502.00 Td (AI Tools: Gemini 3.8 Flash / Claude 3.5 Sonnet for archetype analysis, rubric calibration, and failure-mode clustering.) Tj ET
+BT /F2 8.50 Tf 0.30 0.10 0.10 rg 36.00 491.00 Td (Where the AI Got It Wrong: When analyzing Ep 1, an LLM flagged Juliana's tearful clenching of her bridal gown \(02:11.30\)) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 482.00 Td (as a 'resolved resolution' because the groom had finished speaking and walked away. The AI mistook the physical end of an) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 473.00 Td (argument for emotional closure, missing that Juliana's hardening glare was the ultimate microdrama cliffhanger setup.) Tj ET
+0.93 0.95 0.98 rg 0.85 0.88 0.94 RG 36.00 453.00 523.00 16.00 re B
+BT /F2 9.50 Tf 0.12 0.23 0.45 rg 42.00 457.00 Td (9. SCALING ACROSS SHOWS & PRODUCTION TIMELINE) Tj ET
+BT /F1 8.50 Tf 0.20 0.20 0.20 rg 36.00 445.00 Td (Production Scaling: The Python engine processed 50 episodes \(102.6 minutes of drama, 3,727 blocks\) in 2.01 seconds.) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 435.00 Td (Cost at Scale: $0.00 for rule-based parsing and NMS deduplication. When connected to a lightweight LLM API \(e.g., Gemini Flash\),) Tj ET
+BT /F1 8.00 Tf 0.20 0.20 0.20 rg 36.00 426.00 Td (evaluating the 144 candidate windows costs less than $0.01 per show, compared to $40+ of human editor scrubbing time.) Tj ET
+0.80 0.80 0.80 RG 0.75 w 36.00 42.00 m 559.00 42.00 l S
+BT /F3 8.00 Tf 0.40 0.40 0.40 rg 36.00 30.00 Td (Kuku AI Generalist Assignment - Problem 1: Find the Promos) Tj ET
+BT /F2 8.00 Tf 0.40 0.40 0.40 rg 420.00 30.00 Td (Page 2 of 2 \(Strictly 2 Pages Enforced\)) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000439 00000 n 
+0000006738 00000 n 
+0000007050 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+13496
+%%EOF
